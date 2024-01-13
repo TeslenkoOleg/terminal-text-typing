@@ -3,6 +3,14 @@
 A terminal text typing component for angular 17.0+ that can display entering letters like in terminal.
 The source code is open and can be found on [GitHub](https://github.com/TeslenkoOleg/terminal-text-typing/blob/main/projects/angular-terminal-text-typing/).
 
+<h2 align="center">Demo</h2>
+
+<div align="center">
+
+https://oleh.t-slen.com
+
+</div>
+
 <h2 align="center">Getting started</h2>
 
 ### Setup
