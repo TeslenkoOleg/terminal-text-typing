@@ -1,24 +1,44 @@
-# AngularTerminalTextTyping
+<h2 align="center">About</h2>
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+A terminal text typing component for angular 17.0+ that can display entering letters like in terminal.
+The source code is open and can be found on [GitHub](https://github.com/TeslenkoOleg/terminal-text-typing/blob/main/projects/angular-terminal-text-typing/).
 
-## Code scaffolding
+<h2 align="center">Getting started</h2>
 
-Run `ng generate component component-name --project angular-terminal-text-typing` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project angular-terminal-text-typing`.
-> Note: Don't forget to add `--project angular-terminal-text-typing` or else it will be added to the default project in your `angular.json` file. 
+### Setup
 
-## Build
+```bash
+npm i angular-terminal-text-typing
+```
 
-Run `ng build angular-terminal-text-typing` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Import the AngularTerminalTextTypingComponent into your application:
 
-## Publishing
+```typescript
+import { Component } from '@angular/core';
+import {AngularTerminalTextTypingComponent} from "angular-terminal-text-typing";
 
-After building your library with `ng build angular-terminal-text-typing`, go to the dist folder `cd dist/angular-terminal-text-typing` and run `npm publish`.
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [AngularTerminalTextTypingComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent {}
+```
+### Add selector to HTML template:
 
-## Running unit tests
+```html
+<terminal-text-typing [text]="'SUPER AWESOME TEXT'" [speed]="1000" />
+```
 
-Run `ng test angular-terminal-text-typing` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Input parameters:
 
-## Further help
+text: string - text to display
+speed: number - speed of typing in ms
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### What major versions of angular does this library support?
+
+| Angular version | Library version |
+|-----------------|-----------------|
+| 17.x and higher | 0.0.2           |

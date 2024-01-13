@@ -1,27 +1,44 @@
-# TerminalTextTyping
+<h2 align="center">About</h2>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+A terminal text typing component for angular 17.0+ that can display entering letters like in terminal.
+The source code is open and can be found on [GitHub](https://github.com/TeslenkoOleg/terminal-text-typing/blob/main/projects/angular-terminal-text-typing/).
 
-## Development server
+<h2 align="center">Getting started</h2>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Setup
 
-## Code scaffolding
+```bash
+npm i angular-terminal-text-typing
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Import the AngularTerminalTextTypingComponent into your application:
 
-## Build
+```typescript
+import { Component } from '@angular/core';
+import {AngularTerminalTextTypingComponent} from "angular-terminal-text-typing";
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [AngularTerminalTextTypingComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent {}
+```
+### Add selector to HTML template:
 
-## Running unit tests
+```html
+<terminal-text-typing [text]="'SUPER AWESOME TEXT'" [speed]="1000" />
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Input parameters:
 
-## Running end-to-end tests
+text: string - text to display
+speed: number - speed of typing in ms
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### What major versions of angular does this library support?
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+| Angular version | Library version |
+|-----------------|-----------------|
+| 17.x and higher | 0.0.2           |
