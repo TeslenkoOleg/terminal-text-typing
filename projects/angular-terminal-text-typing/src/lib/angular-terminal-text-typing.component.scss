@@ -1,0 +1,66 @@
+.type-effect-container{
+  display: flex;
+  .content {
+    padding: 20px;
+    white-space: pre-wrap;
+  }
+  p span {
+    display: inline-block;
+    overflow: hidden;
+  }
+  .text-container{
+    display: flex;
+    .text-prefix-container{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+  .text{
+    a{
+      color: #fff;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  .terminal-cursor {
+    position: relative;
+  }
+  .terminal-cursor::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    //right: -15px;
+    /* Remove display: inline-block if not required to be on the same line as text etc */
+    display: inline-block;
+    background-color: #606060;
+    vertical-align: top;
+    width: 8px;
+    /* Set height to the line height of .text */
+    height: 14px;
+    /*
+    Animation paramaters:
+    blink = animation-name,
+    1s = animation-duration,
+    step-end = animation-timing-function,
+    infinite = animation-iteration-count
+    */
+    //-webkit-animation: blink 1s step-end infinite;
+    //animation: blink 1s step-end infinite;
+  }
+
+  //@-webkit-keyframes blink {
+  //  0% { opacity: 1.0; }
+  //  50% { opacity: 0.0; }
+  //  100% { opacity: 1.0; }
+  //}
+  //
+  //@keyframes blink {
+  //  0% { opacity: 1.0; }
+  //  50% { opacity: 0.0; }
+  //  100% { opacity: 1.0; }
+  //}
+}
+
