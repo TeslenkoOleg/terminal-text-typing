@@ -34,11 +34,11 @@ export class AppComponent {}
 
 ### Input parameters:
 
-text: string - text to display
-speed: number - speed of typing in ms
+<p>text: string - text to display</p>
+<p>speed: number - speed of typing in ms</p>
 
 ### What major versions of angular does this library support?
 
 | Angular version | Library version |
 |-----------------|-----------------|
-| 17.x and higher | 0.0.2           |
+| 17.x and higher | latest          |
